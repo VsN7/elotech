@@ -90,6 +90,3 @@ COPY --from=extract build/target/extracted/application/ ./
 EXPOSE 8090
 
 ENTRYPOINT [ "java", "org.springframework.boot.loader.launch.JarLauncher" ]
-
-CMD docker build -t person-image .
-CMD docker run -p 8090:8090 person-image
